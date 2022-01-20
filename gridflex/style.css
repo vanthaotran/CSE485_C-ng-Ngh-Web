@@ -1,0 +1,46 @@
+html {
+    margin: 0;
+}
+.header {
+    background-color: burlywood;
+    grid-column: span 12;
+}
+.sidebar {
+    background-color: cadetblue;
+    grid-column: span 2;
+}
+.main {
+    background-color: chocolate;
+    grid-column: span 10;
+}
+.footer {
+    background-color: darkgreen;
+    grid-column: span 12;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 1rem auto 1rem;
+}
+
+/* CSS for Smartphone */
+@media screen and (max-width:480px) {
+    .sidebar {
+        grid-column: span 12;
+    }
+    .main {
+        grid-column: span 12;        
+    }
+}
+
+/* CSS for Ipad */
+
+@media screen and (max-width:1200px) and (min-width:490px) {
+    .sidebar {
+        grid-column: span 2;
+    }
+    .main {
+        grid-column: span 10;        
+    }
+}
